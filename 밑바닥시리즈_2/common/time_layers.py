@@ -266,7 +266,7 @@ class TimeAffine:
         self.x = None
 
     def forward(self, x):
-        N, T, D = x.shape
+        N, T, H = x.shape
         W, b = self.params
 
         rx = x.reshape(N*T, -1)
